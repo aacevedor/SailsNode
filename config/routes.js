@@ -34,11 +34,7 @@ module.exports.routes = {
 
   'GET /chat': {view: 'chat'}
 
-  '/': {
-    view: 'homepage'
-  }
-
- 
+  
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -48,6 +44,6 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-   'GET /chat': {view: 'chat'}
+  
 
 };
