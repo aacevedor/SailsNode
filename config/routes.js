@@ -32,9 +32,32 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /chat': {view: 'chat'}
+  'GET /chat': {view: 'chat'},
 
-  
+  '/': {view: 'homepage'},
+
+  'POST /create':'UserController.create',
+  'GET  /getusers':'UserController.getusers',
+  'GET  /saveuser':'UserController.saveuser',
+  'GET  /updateuser': 'UserController.updateuser',
+  'POST /loginuserapp':'UserController.loginuserapp',
+
+  'get /login': 'AuthController.login',
+  'get /loginapp': 'AuthController.loginapp',
+
+  'get /logout': 'AuthController.logout',
+  'get /register': 'AuthController.register',
+   
+  'post /auth/local': 'AuthController.callback',
+  'post /auth/app': 'AuthController.callbackapp',
+  'post /auth/local/:action': 'AuthController.callback',
+   
+  'get /auth/:provider': 'AuthController.provider',
+  'get /auth/:provider/callback': 'AuthController.callback',
+  'get /auth/:provider/:action': 'AuthController.callback',
+
+
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -44,6 +67,6 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  
+
 
 };
