@@ -34,29 +34,32 @@ module.exports.routes = {
 
   'GET /chat': {view: 'chat'},
 
-  '/': {view: 'homepage'},
+  '/': {view: 'home'},
 
-  'POST /create':'UserController.create',
   'GET  /getusers':'UserController.getusers',
-  'GET  /saveuser':'UserController.saveuser',
-  'GET  /updateuser': 'UserController.updateuser',
-  'POST /loginuserapp':'UserController.loginuserapp',
+  'GET /login': 'AuthController.login',
+  'GET /loginapp': 'AuthController.loginapp',
 
-  'get /login': 'AuthController.login',
-  'get /loginapp': 'AuthController.loginapp',
-
-  'get /logout': 'AuthController.logout',
-  'get /register': 'AuthController.register',
+  'GET /logout': 'AuthController.logout',
+  'GET /register': 'AuthController.register',
    
-  'post /auth/local': 'AuthController.callback',
-  'post /auth/app': 'AuthController.callbackapp',
-  'post /auth/local/:action': 'AuthController.callback',
+  'POST /auth/local': 'AuthController.callback',
+  'POST /auth/app': 'AuthController.callbackapp',
+  'POST /auth/local/:action': 'AuthController.callback',
    
-  'get /auth/:provider': 'AuthController.provider',
-  'get /auth/:provider/callback': 'AuthController.callback',
-  'get /auth/:provider/:action': 'AuthController.callback',
+  'GET /auth/:provider': 'AuthController.provider',
+  'GET /auth/:provider/callback': 'AuthController.callback',
+  'GET /auth/:provider/:action': 'AuthController.callback',
+
+  
+  /*Pruebas*******************************************************************/
+  
+
+  'GET  /query': 'UserController.query',
 
 
+
+  /*Pruebas*******************************************************************/
 
   /***************************************************************************
   *                                                                          *

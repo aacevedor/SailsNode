@@ -119,10 +119,19 @@ var AuthController = {
    * @param {Object} req
    * @param {Object} res
    */
+  
+  /*register: function (req, res) {
+    res.view({
+       errors: req.flash('error')
+    });
+  },
+  */
+
   register: function (req, res) {
     res.view({
-      errors: req.flash('error')
+       errors: req.flash('error')
     });
+    console.log('Entro');
   },
 
   /**

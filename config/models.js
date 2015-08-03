@@ -28,6 +28,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // migrate: 'alter'
-  connection:'someMongodbServer'
+  migrate: 'alter',
+  connection:'someMysqlServer'
 
 };
