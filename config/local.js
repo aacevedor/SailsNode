@@ -82,7 +82,7 @@ module.exports = {
 
     environment: process.env.NODE_ENV || 'development',
     port: process.env.PORT || 9000,
-    host: process.env.OPENSHIFT_NODEJS_IP || '192.168.0.20',
+    host: process.env.OPENSHIFT_NODEJS_IP || '192.168.0.16',
 
     connection: {
       someMongodbServer: {

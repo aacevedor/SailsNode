@@ -51,7 +51,7 @@ module.exports.routes = {
   'GET /auth/:provider/callback': 'AuthController.callback',
   'GET /auth/:provider/:action': 'AuthController.callback',
 
-  
+    
   /*Pruebas*******************************************************************/
   
 
@@ -60,6 +60,10 @@ module.exports.routes = {
 
 
   /*Pruebas*******************************************************************/
+
+  /*Pages*/
+  'GET  /database': 'PageController.index',
+  /*Pages*/
 
   /***************************************************************************
   *                                                                          *

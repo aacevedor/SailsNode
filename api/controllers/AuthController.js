@@ -120,19 +120,19 @@ var AuthController = {
    * @param {Object} res
    */
   
-  /*register: function (req, res) {
-    res.view({
-       errors: req.flash('error')
-    });
-  },
-  */
-
   register: function (req, res) {
     res.view({
        errors: req.flash('error')
     });
-    console.log('Entro');
   },
+  
+
+  /*register: function (req, res) {
+    res.view({
+       errors: req.flash('error')
+    });
+    console.log('Entro');
+  },*/
 
   /**
    * Create a third-party authentication endpoint
@@ -211,7 +211,7 @@ var AuthController = {
     passport.callback(req, res, function (err, user, challenges, statuses) {
       if (err || !user) {
         return res.json({
-          todo: 'no'
+          response: 'login.html'
         });
       }
 
@@ -226,7 +226,7 @@ var AuthController = {
         console.log(identifier+" "+password);
         
         return res.json({
-          todo: 'yes'
+          response: 'indexapp.html'
         });
       });
     });
